@@ -3,6 +3,9 @@
 
 const check = document.getElementById(`check`);
 
+//recupero l'elemnto che andrò a mostrare il risultato
+const result = document.getElementById("result");
+
 //devo prevenire il comportamento di default della pagina 
 
 check.addEventListener(`click`, function (e) {
@@ -12,6 +15,7 @@ check.addEventListener(`click`, function (e) {
 
   const distance = document.getElementById("km").value;
   const age = document.getElementById("age").value;
+  const iduser = document.getElementById("nominativo").value;
 
 
   //calcolo il costo del biglietto e stabilisco le condizioni che devono essere applicate al calcolo finale.
@@ -36,7 +40,15 @@ check.addEventListener(`click`, function (e) {
   else {
     finalprice = runprice
   }
+
+  //Mostro il risultato direttamente in pagina, quindi recupero prima la variabile da html 
+
+  result.innerText = `Ciao ${iduser}, in base alla tua età ${age} e la distanza da percorrere ${distance} il prezzo del tuo biglietto è ${finalprice.toFixed(2)} `
 })
+
+
+
+
 
 
 
