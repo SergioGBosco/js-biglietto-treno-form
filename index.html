@@ -15,34 +15,69 @@
     <div class="row">
       <div class="col-12">
         <form action="">
-          <div class="row">
+          <div class="row bg-primary">
             <div class="col-12 col-md-4">
-              <h2>Nome del Passeggero</h2>
+
               <label for="" class="form-label">Nome e Cognome</label>
               <input type="text" name="nominativo" id="nominativo" class="form-control"
                 placeholder="Inserisci Nome e Cognome">
             </div>
             <div class="col-12 col-md-4">
-              <h2>Distanza da Percorrere</h2>
+
               <label for="" class="form-label">KM</label>
               <input type="number" name="km" id="km" class="form-control" placeholder="Km da percorrere">
             </div>
             <div class="col-12 col-md-4">
-              <h2>Età del Passeggero</h2>
+
               <label for="" class="form-label">Età</label>
               <input type="number" name="age" id="age" class="form-control" placeholder="Quanti anni hai?">
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-warning" id="check">Conferma</button>
-              <button type="submit" class="btn btn-secondary" id="reset">Annulla</button>
+              <div class="d-flex justify-content-center m-3">
+                <div>
+                  <button type="submit" class="btn btn-warning mx-3" id="check">Conferma</button>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-danger mx-3" id="reset">Annulla</button>
+                </div>
+              </div>
             </div>
           </div>
         </form>
       </div>
       <div class="col-12">
-        <div id="result"></div>
+        <div class="card">
+          <div class="card-header text-center">
+            Il Tuo Biglietto
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Dettaglio del biglietto</h5>
+            <div class="col-12 col-md-4">
+              <div id="result"></div>
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="d-column justify-content-around">
+                <h5>Offerta</h5>
+              </div>
+              <div class="d-column justify-content-around">
+                <h5>Vagone</h5>
+              </div>
+              <div class="d-column justify-content-around">
+                <h5>Codice Bigilietto</h5>
+              </div>
+              <div class="d-column justify-content-around">
+                <h5>Costo del Biglietto</h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
+  </div>
+
+
+  </div>
   </div>
   <script src="js/script.js"></script>
 </body>
