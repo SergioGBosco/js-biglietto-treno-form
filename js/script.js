@@ -3,6 +3,10 @@
 
 const check = document.getElementById(`check`);
 
+//recupero il secondo bottone per creare la dunzione di reset
+
+const reset = document.getElementById(`reset`);
+
 //recupero l'elemnto che andrò a mostrare il risultato
 const result = document.getElementById("result");
 
@@ -44,6 +48,18 @@ check.addEventListener(`click`, function (e) {
   //Mostro il risultato direttamente in pagina, quindi recupero prima la variabile da html 
 
   result.innerText = `Ciao ${iduser}, in base alla tua età ${age} e la distanza da percorrere ${distance} il prezzo del tuo biglietto è ${finalprice.toFixed(2)} `
+})
+
+reset.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  result.innerText = ``;
+
+  //prendo le variabili dal dom ma non richiamandole con le variabili assegnate, perchè essendo all'inteno di un altra funzione queste non vengono visualizzate 
+
+  document.getElementById("nominativo").value = ``;
+  document.getElementById("km").value = ``;
+  document.getElementById("age").value = ``;
+
 })
 
 
