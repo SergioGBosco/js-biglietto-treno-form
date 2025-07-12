@@ -21,3 +21,11 @@ MILESTONE 3:
 Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
 
 Numero di push minimo: 7
+
+1 - creo variabile percorso
+2 - creo variabile età
+3 - calcolo il prezzo finale del biglietto
+?Se l'età del passeggero è inferiore a 18 applico uno sconto del 20%
+?Se l'età del passeggero è superiore a 65 applico uno sconto del 40%
+
+Come prima passo vado a creare la struttura wweb della pagina
