@@ -12,8 +12,30 @@ check.addEventListener(`click`, function (e) {
 
   const distance = document.getElementById("km").value;
   const age = document.getElementById("age").value;
-  console.log(age)
-  console.log(distance)
+
+
+  //calcolo il costo del biglietto e stabilisco le condizioni che devono essere applicate al calcolo finale.
+
+  //stabilisco il prezzo base a km da percorrere
+  let price = 0.21
+
+  //stabilisco il prezzo della corsa
+  let runprice = price * distance
+
+  //Variabile vuota creata per inserire il prezzo finale al netto di sconti
+  let finalprice;
+
+  //aggiungo la condizione 
+  if (age < 18) {
+    finalprice = runprice * 0.8 //sconto del 20%
+
+  }
+  else if (age >= 65)
+    finalprice = runprice * 0.60 //sconto del 40%
+
+  else {
+    finalprice = runprice
+  }
 })
 
 
