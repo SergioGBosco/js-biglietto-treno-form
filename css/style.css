@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  height: 400px;
+  background-image: url(../img/trenosfondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

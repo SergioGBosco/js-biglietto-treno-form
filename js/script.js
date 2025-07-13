@@ -58,22 +58,30 @@ check.addEventListener(`click`, function (e) {
   const wagonnumber = document.getElementById(`wagonnumber`);
   const codrandom = document.getElementById(`codrandom`);
   const finalpricerun = document.getElementById(`finalpricerun`);
+  const showname = document.getElementById(`showname`);
+  const showage = document.getElementById(`showage`);
+  const showdistance = document.getElementById(`showdistance`);
 
-  offer.innerText = runoffer
 
-  wagonnumber.innerText = Math.floor(Math.random() * 10 + 1);
+  //voglio creare la condizione che mi permette di generare i dati all'interno del biglietto solo quando vengono inseriti i dati nella fase preliminare 
 
-  codrandom.innerText = Math.floor(Math.random() * 10000 + 1);
+  if (distance != `` && age != `` && iduser != ``) {
+    showname.innerText = iduser;
+    showage.innerText = `Anni : ${age}`
+    showdistance.innerText = `Lunghezza Tratta : ${distance}Km`
 
-  finalpricerun.innerText = `${finalprice.toFixed(2)} €`;
+    offer.innerText = runoffer
 
+    wagonnumber.innerText = Math.floor(Math.random() * 10 + 1);
+
+    codrandom.innerText = Math.floor(Math.random() * 10000 + 1);
+
+    finalpricerun.innerText = `${finalprice.toFixed(2)} €`;
+  }
 })
 
 reset.addEventListener(`click`, function (e) {
   e.preventDefault();
-  result.innerText = ``;
-
-
 
 
   //prendo le variabili dal dom ma non richiamandole con le variabili assegnate, perchè essendo all'inteno di un altra funzione queste non vengono visualizzate 
@@ -81,12 +89,15 @@ reset.addEventListener(`click`, function (e) {
   document.getElementById("nominativo").value = ``;
   document.getElementById("km").value = ``;
   document.getElementById("age").value = ``;
-  document.getElementById("offer").value = ``;
-  document.getElementById("wagonnumber").value = ``;
-  document.getElementById("codrandom").value = ``;
-  document.getElementById("finalpricerun").value = ``;
-})
+  document.getElementById("offer").innerText = `-`;
+  document.getElementById("wagonnumber").innerText = `-`;
+  document.getElementById("codrandom").innerText = `-`;
+  document.getElementById("finalpricerun").innerText = `-`;
+  document.getElementById("showname").innerText = `-`;
+  document.getElementById("showage").innerText = `-`;
+  document.getElementById("showdistance").innerText = `-`;
 
+})
 
 
 
